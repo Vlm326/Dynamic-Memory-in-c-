@@ -21,11 +21,34 @@
 
 Генерация PDF документации
 
+Установка необходимого софта
+```
+#Ubuntu/Debian
+sudo apt update
+sudo apt install -y \
+  ruby \
+  ruby-dev \
+  build-essential \
+  zlib1g-dev \
+  asciidoctor \
+  libasciidoctor-pdf-ruby \
+  fonts-dejavu fonts-noto-cjk fonts-noto-color-emoji
 
-Установка необходимого гема для подсветки кода
+#Fedora
+sudo dnf install -y \
+  ruby \
+  ruby-devel \
+  gcc \
+  make \
+  redhat-rpm-config \
+  rubygem-asciidoctor \
+  rubygem-asciidoctor-pdf \
+  google-noto-sans-cjk-fonts \
+  google-noto-emoji-fonts
 
-gem install rouge
+```
+сборка проекта
 
-Сборка в ПДФ
-
+```
 asciidoctor-pdf lab.adoc
+```
